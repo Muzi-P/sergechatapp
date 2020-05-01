@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 class Message extends React.Component {
     constructor() {
@@ -24,7 +24,7 @@ class Message extends React.Component {
         <div className="message">
             <div className="message-username">{username}</div>
             <div className="message-text" >{text}</div>
-            <div className="message-time" >{this.formatCreatedAt()}</div>
+            {/* <div className="message-time" >{this.formatCreatedAt()}</div> */}
         </div>
     )
     }
