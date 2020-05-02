@@ -9,10 +9,7 @@ class App extends React.Component {
   constructor() {
     super()
     this.state = {
-      messages: [],
-      joinableRooms: [],
-      joinedRooms: [],
-      roomId: null
+      
     }
   }  
   

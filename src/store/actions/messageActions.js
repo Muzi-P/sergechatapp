@@ -1,12 +1,13 @@
 export const sendMessage = (message) => {
     return (dispatch, getState,{ getFirebase, getFirestore }) => {
         const firestore = getFirestore();
-        console.log(message);
+        const profile = getState().firebase.profile;
+        const authorId = getState().firebase.auth.uid;
         firestore.collection('messages').add({
             ...message,
-            senderFirstName: "Muzi",
-            senderLastName: "Gondwe",
-            senderId: 1234,
+            senderFirstName:  profile.firstName,
+            senderLastName: profile.lastName,
+            senderId: authorId,
             sentAt: new Date()
         }).then (() => {
             dispatch({type: 'SEND_MESSAGE', message})

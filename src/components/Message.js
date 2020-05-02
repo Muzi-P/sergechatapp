@@ -4,13 +4,13 @@ class Message extends React.Component {
     constructor() {
         super()
         this.state = {
-          time: ''
+            time: ''
         }
-      }
+    }
     formatCreatedAt = () => {
-        var date = new Date(this.props.createdAt);
+        var date = new Date(this.props.sentAt.toDate());
         var time = `${date.getHours()}:${this.formatMinutes(date.getMinutes())}`
-        return  time
+        return time
     }
 
     formatMinutes = (minutes) => {
@@ -18,15 +18,15 @@ class Message extends React.Component {
         return minutes
     }
 
-    render (){
-        const {username, text} = this.props
-    return (
-        <div className="message">
-            <div className="message-username">{username}</div>
-            <div className="message-text" >{text}</div>
-            {/* <div className="message-time" >{this.formatCreatedAt()}</div> */}
-        </div>
-    )
+    render() {
+        const { username, text } = this.props;
+        return (
+            <div className="message">
+                <div className="message-username">{username}</div>
+                <div className="message-text" >{text}</div>
+                <div className="message-time" >{this.formatCreatedAt()}</div>
+            </div>
+        )
     }
 }
 

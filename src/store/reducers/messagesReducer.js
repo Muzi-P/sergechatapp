@@ -18,13 +18,11 @@ const initState = {
 const messagesReducer = (state = initState, action) => {
     switch (action.type) {
         case 'SEND_MESSAGE':
-            console.log(action.message)
             return Object.assign({}, state, {
                 messages: [
                     ...state.messages,
                     {
                         text: action.message.message,
-                        senderId: 'muzi'
                     }
                 ]
             })
