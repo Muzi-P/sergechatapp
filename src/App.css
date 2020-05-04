@@ -27,14 +27,14 @@ html, body {
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr  5fr 6fr 60px;
   grid-template-areas: 
       "s s s s s s"
-      "r m m m m m"
-      "r m m m m m"
-      "r m m m m m"
-      "r m m m m m"
-      "r m m m m m"
-      "r m m m m m"
-      "r m m m m m"
-      "n f f f f f";
+      "m m m m m m"
+      "m m m m m m"
+      "m m m m m m"
+      "m m m m m m"
+      "m m m m m m"
+      "m m m m m m"
+      "m m m m m m"
+      "f f f f f f";
 }
 
 .nav {

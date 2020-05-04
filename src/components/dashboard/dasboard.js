@@ -17,10 +17,10 @@ export class dasboard extends Component {
             <>
                 <div className="app">
                     <Navbar/>
-                    <RoomList />
+                    {/* <RoomList /> */}
                     <MessageList messages = {messages} />
                     <SendMessageForm />
-                    <NewRoomForm />
+                    {/* <NewRoomForm /> */}
                 </div>
             </>
         )
